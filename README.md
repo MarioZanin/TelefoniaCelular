@@ -21,11 +21,9 @@ A classe Assinante possui 5 atributos:
 a) cpf: CPF do assinante;
 b) nome: nome completo do assinante;
 c) numero: número do telefone celular do assinante.
-d) chamadas: vetor de referências a objetos da classe Chamada (vide seção 3.5), representa
-as chamadas feitas pelo assinante;
+d) chamadas: vetor de referências a objetos da classe Chamada (vide seção 3.5), representa as chamadas feitas pelo assinante;
 e) numChamadas: número de chamadas feitas pelo assinante.
-O construtor desta classe deve inicializar os seus atributos com os argumentos do construtor
-e instanciar o vetor chamadas.
+O construtor desta classe deve inicializar os seus atributos com os argumentos do construtor e instanciar o vetor chamadas.
 
 Os métodos da classe Assinante são descritos a seguir:
 a) long getCpf(): devolve o CPF do assinante;

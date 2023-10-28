@@ -31,7 +31,7 @@ class PrePago {
     public float fazerChamada(Date data, int duracao) {
        // return this.data = data;
        // return this.duracao = duracao;
-       float custoChamada = duracao * 1.45f; // Assumindo um custo de R$ 0.10 por minuto
+       float custoChamada = duracao * 1.04f; // Assumindo um custo de R$ 1.04 por minuto
        if (credito >= custoChamada) {
            credito -= custoChamada;
            System.out.println("Chamada realizada em " + data + " com duração de " + duracao + " minutos. Custo: R$" + custoChamada);
