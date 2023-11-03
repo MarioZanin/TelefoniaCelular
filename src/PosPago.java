@@ -5,7 +5,7 @@ class PosPago extends Assinante {
     private String nome;
     private int numero;
     private float assinatura;
-   
+
     // Construtor
     public PosPago(long cpf, String nome, int numero, float assinatura) {
         super(cpf, nome, numero, assinatura)
