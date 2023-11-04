@@ -1,39 +1,34 @@
-import java.util.Date;
- 
+//Adquando a estrutura funcional com a estrutura de negócio
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar; 
 class Chamada {
-    private Date data;
+    private GregorianCalendar data;
     private int duracao;
 
     // Construtor
-    public Chamada(Date data, int duracao) {
+    public Chamada(GregorianCalendar data, int duracao) {
         this.data = data;
         this.duracao = duracao;
         
     }
 
     // Método para obter a data da chamada
-    public Date getData() {
-        return this.data = data;
-       
+    public GregorianCalendar getData() {
+        return data;
     }
 
-    public void setData(Date data){
-        this.data = data;
-
-    }
 
     // Método para obter a duração da chamada
     public int getDuracao() {
-        return this.duracao = duracao;
+        return duracao;
     }
 
-    public int setDuracao(){
-        this.duracao = duracao;
-    }
+ 
 
     // Método toString para representação em String do objeto
+    @Override
     public String toString() {
-        return "Chamada [data=" + data + "duracao" +duracao+ "]";
-       
+    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    return "Data: " + sdf.format(data.getTime()) + ", Duração: " + duracao + " minutos";
     }
 }
