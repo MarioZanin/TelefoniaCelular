@@ -3,14 +3,14 @@
 import java.util.GregorianCalendar;
 class PrePago extends Assinante{
     private Recarga[] recargas;
-    private float credito;
+    private float creditos;
     private int numRecargas;
     // Construtor
     public PrePago(long cpf, String nome, String numero, int maxChamadas, int maxRecargas) {
         super(cpf,nome,numero, maxChamadas);
-        this.credito = 0;
-        this.numRecargas = 0;
         this.recargas = new Recarga[maxRecargas];
+        this.creditos = 0;
+        this.numRecargas = 0;
     }
     //Adquando a estrutura funcional com a estrutura de negócio
     //public float getcredito(float credito){
@@ -27,7 +27,6 @@ class PrePago extends Assinante{
     //}
     // * Método para realizar uma recarga - Adquando a estrutura funcional com a estrutura de negócio *
     //public void recarga(Date data, float valor, int numRecargas) {
-    // if (valor <= 0){
     //throw new Exception("O valor da recarga deve ser maior que 0");
     //}
     //this.creditos += valor;
@@ -57,8 +56,7 @@ class PrePago extends Assinante{
     //    float valorChamadaReal = calcularValorChamada(data, duracao);
     //    return valorChamadaReal;
     //}
-
-    // * Método para imprimir a fatura de um determinado mês - Adquando a estrutura funcional com a estrutura de negócio *
+    // **** Método para imprimir a fatura de um determinado mês - Adquando a estrutura funcional com a estrutura de negócio ****
     public void imprimirFatura(int mes) {
     //    this.mes = mes;
         System.out.println("Fatura do assinante pré-pago: " + super.toString());

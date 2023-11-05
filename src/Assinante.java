@@ -50,7 +50,6 @@ class Assinante {
     @Override
     public String toString() {
    //      return "Assinante{" +"cpf=" + cpf + ", nome='" + nome + '\'' +", numero=" + numero +", creditos=" + creditos +", numRecargas=" + numRecargas +'}';
-   
         return "CPF: " + cpf + ", Nome: " + nome + ", Número: " + numero;
     }
     // * Relacionar e Contabilizar Chamada com os Assinantes *

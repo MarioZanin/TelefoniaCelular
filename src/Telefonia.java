@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//Adquando a estrutura funcional com a estrutura de negócio
 //import java.util.Date;
 import java.util.GregorianCalendar;
 class Telefonia {
@@ -49,7 +50,6 @@ class Telefonia {
         String nome = scanner.nextLine();
         System.out.println("Digite o número do assinante: ");
         String numero = scanner.nextLine();
-
         if (tipo == 1 && numPrePagos < prePagos.length) {
             prePagos[numPrePagos] = new PrePago(cpf, nome, numero, 100, 50); // Exemplo de limite de 100 chamadas e 50 recargas
             numPrePagos++;
@@ -119,7 +119,7 @@ class Telefonia {
             scanner.nextLine(); // Limpar o buffer
             String[] dataSplit = dataStr.split("/");
             int dia = Integer.parseInt(dataSplit[0]);
-            int mes = Integer.parseInt(dataSplit[1])-1; // Janeiro é representado por 0 no Calendar
+            int mes = Integer.parseInt(dataSplit[1]); // Janeiro é representado por 0 no Calendar
             int ano = Integer.parseInt(dataSplit[2]);
             GregorianCalendar data = new GregorianCalendar(ano, mes, dia);
             assinante.fazerChamada(data, duracao);
@@ -156,7 +156,7 @@ class Telefonia {
             scanner.nextLine(); // Limpar o buffer
             String[] dataSplit = dataStr.split("/");
             int dia = Integer.parseInt(dataSplit[0]);
-            int mes = Integer.parseInt(dataSplit[1])-1;// Janeiro é representado por 0 no Calendar
+            int mes = Integer.parseInt(dataSplit[1]);// Janeiro é representado por 0 no Calendar
             int ano = Integer.parseInt(dataSplit[2]);
             GregorianCalendar data = new GregorianCalendar(ano, mes, dia);
             assinante.recarregar(data, valor);
@@ -165,7 +165,7 @@ class Telefonia {
             System.out.println("Assinante pré-pago não encontrado.");
         }
     }
-    private PrePago localizarPrePago(long cpf) {
+        private PrePago localizarPrePago(long cpf) {
         for (int i = 0; i < numPrePagos; i++) {
             if (prePagos[i].getCpf() == cpf) {
                 return prePagos[i];
@@ -201,7 +201,6 @@ public void imprimirFaturas() {
         System.out.println("Digite o número do mês de consumo para imprimir as faturas (1 para janeiro, 2 para fevereiro, etc.): ");
         int mes = scanner.nextInt();
         scanner.nextLine(); // Limpar o buffer
-
         System.out.println("Faturas do mês " + mes + ":");
         imprimirFaturasPrePagos(mes);
         imprimirFaturasPosPagos(mes);

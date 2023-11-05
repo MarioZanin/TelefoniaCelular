@@ -3,11 +3,10 @@
 import java.util.GregorianCalendar;
 class PosPago extends Assinante {
     private float assinatura;
-
     // ***Construtor -Adquando a estrutura funcional com a estrutura de negócio***
     public PosPago(long cpf, String nome, String numero, int maxChamadas, float assinatura) {
         super(cpf, nome, numero, maxChamadas);
-        this.assinatura = assinatura;        
+        this.assinatura = assinatura;
     }
     // ***Método para imprimir a fatura de um determinado mês - Adquando a estrutura funcional com a estrutura de negócio***
     public void imprimirFatura(int mes) {
