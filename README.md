@@ -1,4 +1,9 @@
 # TelefoniaCelular - Trabalho desenvolvido em grupo na matéria de Desenvolvimento para Servidores do curso de Sistemas para Internet.
+
+Componentes do grupo
+Nome: Mario Celso Zanin                   matrícula  0050832311042 
+Nome: Gabriel Henrique Tasso Martins      matrícula   0050832121043
+
 Descrição do Sistema
 O sistema deverá ser baseado em um menu com as seguintes opções:
 a) Cadastrar assinante: o sistema deverá solicitar o tipo de assinante, prépago ou póspago.
